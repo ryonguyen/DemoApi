@@ -13,6 +13,7 @@ class CreateNewsTable extends Migration
      */
     public function up()
     {
+        $this->down();
         Schema::create('tb_news', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');

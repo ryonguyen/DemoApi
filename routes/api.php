@@ -18,14 +18,23 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:api');
 
 
-Route::any('/news/list'                 , 'NewsController@getNews');
 
-Route::get('/news/{id}'                 , 'NewsController@getNewById');
+Route::get('/news/{id}'             , 'NewsController@getNewById');
+Route::get('/news'                  , 'NewsController@getViewNews');
 
-Route::post('/news'                     , 'NewsController@postNewById');
-Route::post('/news/create'              , 'NewsController@create');
-Route::post('/news/update'              , 'NewsController@update');
-Route::post('/news/delete'              , 'NewsController@delete');
+
+
+
+
+
+
+//Route::any('/news/list'                 , 'NewsController@getNews');
+//
+//
+//Route::post('/news'                     , 'NewsController@postNewById');
+//Route::post('/news/create'              , 'NewsController@create');
+//Route::post('/news/update'              , 'NewsController@update');
+//Route::post('/news/delete'              , 'NewsController@delete');
 
 
 

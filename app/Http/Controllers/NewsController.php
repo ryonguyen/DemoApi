@@ -3,14 +3,34 @@
 namespace App\Http\Controllers;
 
 use App\Model\News;
-use Illuminate\Http\Request;
-
 use App\Http\Requests;
-use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
 
 class NewsController extends Controller
 {
+
+    /**
+     *
+     * show list all news have page
+     *
+     * @return  View
+     */
+    public function getViewNews(){
+        $news = News::all();
+        $items = [];
+        $i = 1;
+        foreach ($news as $item) {
+            $item->_link = url("/news/{$item->id}");
+            $items[$i] = $item;
+            $i++;
+        }
+        ($items);
+        return view('news', [
+            'items' => $items,
+        ]);
+    }
+
+
     public function getNews()
     {
         return $this->success(News::all());

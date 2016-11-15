@@ -3,15 +3,20 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+        <thead>
+        <tr>
 
-                <div class="panel-body">
-                    You are logged in!
-                </div>
-            </div>
-        </div>
+            <th class="hidden-phone">Usuario</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th class="hidden-phone">Email</th>
+            <th class="hidden-phone">Provincia</th>
+            <th class="hidden-phone">Miembro desde</th>
+            <th>Estado</th>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
     </div>
 </div>
 @endsection
